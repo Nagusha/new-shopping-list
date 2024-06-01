@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hello">
+  <div id="myDIV" class="header">
+    <h1 style="margin:5px">Shopping List</h1>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+
+  <ul id="myUL"></ul>
+</div>
+<div>
+  <div>
+    <button>Total items: <span id="total-items">0</span></button>
+    <button>Marked items: <span id="marked-items">0</span></button>
+    <button>Unmarked items: <span id="unmarked-items">0</span></button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
