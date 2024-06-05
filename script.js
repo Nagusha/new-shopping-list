@@ -19,10 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputField = document.getElementById('myInput');
   const ulElement = document.getElementById('myUL');
 
+  const items = [];
+
   addButton.addEventListener('click', () => newElement());
 
   ulElement.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
+      const index = Array.from(ulElement.children).indexOf(event.target);
+      items[index].toggleMarked();
       event.target.classList.toggle('checked');
       updateCounts();
     }
@@ -36,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const item = new ShoppingItem(inputValue);
+    items.push(item);
     addItemToList(item);
     inputField.value = '';
     updateCounts();
